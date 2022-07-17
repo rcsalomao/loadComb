@@ -333,29 +333,3 @@ def generateServiceCombo(deadLoadVector=None, liveLoadVector=None, combinationTy
             out.append((dlServiceCombo, ll))
 
     return out
-
-
-if __name__ == "__main__":
-    cargasPermanentes = [DeadLoad('elementos construtivos industrializados com adições in loco', 100),
-                         DeadLoad('elementos construtivos industrializados com adições in loco', 200),
-                         DeadLoad('elementos construtivos industrializados com adições in loco', 300)]
-    cargasVariáveis = [LiveLoad('ações variáveis em geral', 'edificações de acesso restrito', 10),
-                       LiveLoad('ações variáveis em geral', 'edificações de acesso público', 20),
-                       LiveLoad('vento', 'vento', 15)]
-
-    # bla = generateDeadLoadUltimaCombo(cargasPermanentes, 'normal')
-    # bla = generateLiveLoadUltimaCombo(cargasVariáveis, 'normal')
-    # bla = generateUltimaCombo(cargasPermanentes)
-    # bla = generateUltimaCombo(None, cargasVariáveis)
-    # bla = generateUltimaCombo(cargasPermanentes, cargasVariáveis)
-
-    # bla = generateDeadLoadServiceCombo(cargasPermanentes)
-    # bla = generateLiveLoadServiceCombo(cargasVariáveis, 'frequente')
-    # bla = generateServiceCombo(cargasPermanentes)
-    # bla = generateServiceCombo(None, cargasVariáveis)
-    bla = generateServiceCombo(cargasPermanentes, cargasVariáveis)
-
-    for b in bla:
-        print(b)
-
-    print(len(bla))

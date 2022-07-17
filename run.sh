@@ -1,1 +1,1 @@
-~/venv/bin/python ./loadCombinations.py
+~/venv/bin/python ./example.py
